@@ -1,0 +1,187 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    
+    // BOXICONS
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css")
+    // SWIPER CSS
+    link(rel="stylesheet", href="https://unpkg.com/swiper@7/swiper-bundle.min.css")
+    // CSS
+    link(rel="stylesheet", href="./index.css")
+
+    title Fidesio - Test Intégration
+  body 
+
+    #preloader
+      #percent 1%
+      #bar
+        #barConfirm
+
+    // HEADER
+    header.header#header
+      //  Slider header container
+      .swiper.mySwiper1
+        // Additional required wrapper
+        .swiper-wrapper
+          // Slides
+          article.article.swiper-slide
+            img.article__bg(src="./685609.png", alt="")
+            .article__container.bd-container
+              .article__data 
+                ul
+                  li
+                    button 
+                      span école
+                  li 
+                    button 
+                      span robotique
+                  li 
+                    button 
+                      span industrie du futur
+                h3.article__title Un printemps robotique à Arts et Métiers
+                p.article__description Le campus Arts et Métiers de Lille, se positionne comme un acteur incontournable de la robotique par ses activités de formation, de recherche et de transfert technologique. 
+                a.article__btn Lire plus
+                  i.fas.fa-chevron-right
+          
+          article.article.swiper-slide
+            img.article__bg(src="./ENSAM_REEP.jpeg", alt="")
+            .article__container.bd-container
+              .article__data 
+                ul
+                  li
+                    button 
+                      span portrait
+
+                h3.article__title Schneider Electric s’engage dans la campagne de mécénat d’ Arts et Métiers
+                p.article__description Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta quia ad delectus eveniet sed dolores explicabo voluptates beatae facere totam.
+                a.article__btn Lire plus
+                  i.fas.fa-chevron-right
+
+      .new-slider
+        //  Slider header container
+        .swiper.mySwiper2.bd-container
+          // Additional required wrapper
+          .swiper-wrapper
+            // Slides
+            article.new-slider__article.swiper-slide
+              .new-slider__article-wrap
+                span.new-slider__article-title Partenariat
+                  i.far.fa-handshake
+                p.new-slider__article-description Schneider Electric s’engage dans la campagne de mécénat d’ Arts et Métiers
+                a.new-slider__article-btn Lire plus
+                  i.fas.fa-chevron-right
+
+            article.new-slider__article.swiper-slide
+              .new-slider__article-wrap
+                span.new-slider__article-title école
+                  i.fas.fa-landmark
+                p.new-slider__article-description Qualité et responsabilité Sociale des entreprises
+                a.new-slider__article-btn Lire plus
+                  i.fas.fa-chevron-right
+
+            article.new-slider__article.swiper-slide
+              .new-slider__article-wrap
+                span.new-slider__article-title portrait
+                  i.fas.fa-book-open
+                p.new-slider__article-description Ma vie d’étudiante à Arts et Métiers : Julie, en Bachelor de technologie à Bordeaux
+                a.new-slider__article-btn Lire plus
+                  i.fas.fa-chevron-right
+        .swiper-btn-next
+          i.fas.fa-chevron-right
+        .swiper-btn-prev
+          i.fas.fa-chevron-left
+
+    // FOOTER
+    footer.footer
+      .footer__wrap
+        .footer__container.bd-container
+
+          .footer__list-links#footerListLinks
+            .footer__content.active
+              h3
+                span.footer__title école
+              ul.footer__links
+                each val, index in ['Présentation', 'Réseau Arts et Métiers', 'partenaires', 'Une école engagée', 'Les campus Arts et Métiers', 'International', 'Agenda', 'Actualités', 'L’école recrute', 'Marchés publics']
+                  li 
+                    a(href="").footer__link= val
+            
+            .footer__content.active
+              h3
+                span.footer__title formation
+              ul.footer__links
+                each val, index in ['Bachelor de technologie', 'Ingénieur généraliste', 'Ingénieur de spécialité', 'Masters recherche', 'Mastères spécialisés et MBA', 'Doctorat', 'étudiants internationaux', 'Formation tout au long de la vie', 'MOOCS', 'Vie étudiante']
+                  li 
+                    a(href="").footer__link= val
+
+            .footer__content.active
+              h3
+                span.footer__title recherche          
+              ul.footer__links
+                each val, index in ['Filières de recherche', 'Les réseaux nationaux de la connaissance (RNC)', 'Ingénieur de spécialité', 'Recherche partenariale', 'Publications']
+                  li 
+                    a(href="").footer__link= val
+            
+            .footer__content.active
+              h3
+                span.footer__title entreprise
+              ul.footer__links
+                each val, index in ['Recruter nos étudiants', 'Soutenir l’école', 'Ingénieur de spécialité', 'Transfert et valorisation', 'Entrepreneuriat', 'Former vos collaborateurs', 'Organiser un évènement']
+                  li 
+                    a(href="").footer__link= val
+          .footer__list-logos 
+            ul
+              li 
+                img(src="./logo-ic-arts.png", alt="")
+              li 
+                img(src="./logo-paris-techinstitut.png", alt="")
+              li 
+                img(src="./logo-heSam-carre.png", alt="")
+            
+        .footer__container-map
+          .footer__wrap-map.ratio#ratioMap(style="--ratio: 9/12;")
+            iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19829.8785235579!2d2.357221723849235!3d48.83669877152647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6718c8bebce9f%3A0x9220c0c18f5aa958!2sArts%20et%20M%C3%A9tiers%20-%20Campus%20de%20Paris%20-%20ENSAM!5e0!3m2!1sfr!2sfr!4v1636071182054!5m2!1sfr!2sfr' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy')
+
+          .footer__wrap-txt.bd-container
+            .footer__wrap-titles
+              i.fas.fa-map-marker-alt
+              span Ecole Nationale
+              br
+              span Supérieur des
+              br
+              span Arts et Métiers
+            .footer__wrap-adress
+              h4 Campus : 
+                span Paris 
+                i.fas.fa-chevron-down
+              span 151, boulevard de l’Hôpital, 75013 Paris 
+              br
+              span Tél : 33 (0)1 44 24 62 99
+              br
+              span Métro : Place d’Italie
+              
+      .footer__corporate
+        .footer__corporate-container.bd-container
+          .footer__corporate-links__bottom-container
+            .footer__corporate-links__copyright
+              span © école Nationale Supérieur des Arts et Métiers 2016
+
+          .footer__corporate-links
+            ul.footer__corporate-links__group
+              li.footer__corporate-links__item
+                a.footer__corporate-links__item-link Rejoignez-nous 
+              li.footer__corporate-links__item
+                a.footer__corporate-links__item-link Contactez-nous 
+              li.footer__corporate-links__item
+                a.footer__corporate-links__item-link Plan d’accès 
+              li.footer__corporate-links__item
+                a.footer__corporate-links__item-link Mentions légales 
+                
+          .footer__corporate-links__title Agence fidesio
+    
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js") 
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js") 
+    script(src="https://unpkg.com/swiper@7/swiper-bundle.min.js") 
+    script(src="./index.js")
