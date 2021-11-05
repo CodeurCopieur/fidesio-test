@@ -21,14 +21,13 @@ function initAnimations() {
   gsap.from( "#footerListLinks > *", {
     scrollTrigger: {
       trigger: "#footerListLinks",
-      scrub: true,
       start: 'top bottom',
       end: 'top-=100'
     },
     duration: .5,
     y: -40,
     opacity: 0,
-    stagger: .15
+    stagger: .5
   })
 }
 
